@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html class="bg-danger">
+<head>
+    <title>Mod10-Mini-Project</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="../js/bootstrap.js"></script>
+    <script src="../scripts/scripts_searchDetails.js" defer></script> 
+</head>
+<header>
+    <h1 class="lead display-4 p-5 mt-5 mx-5 bg-warning rounded-3 text-center">Pokemon API Search</h1>
+    <div class="row m-3 rounded-3">
+        <div class="col-md-6 bg-light rounded-start">
+            <div id="carouselExampleSlidesOnly" class="carousel slide m-3" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div id="pokemon-img-1"class="carousel-item-1">
+                        
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div id="pokemon-img-2"class="carousel-item-2">
+                    
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div id="pokemon-img-3"class="carousel-item-3">
+                    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 bg-light rounded-end">
+            <div id="carouselExampleSlidesOnly" class="carousel slide m-3" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div id="pokemon-img-4"class="carousel-item-1">
+                        
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div id="pokemon-img-5"class="carousel-item-2">
+                    
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div id="pokemon-img-6"class="carousel-item-3">
+                    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+</header>
+<body class="bg-danger p-4">
+    <div id="list-reset" class="row row-cols-1 row-cols-md-2">
+        <div>
+            <button id="pokemon-list-button" type="submit" class="shadow-md rounded ms-3 btn btn-primary btn-lg mb-3 rounded-3 p-2 text-white px-4">Get Pokemon List</button>
+            <button id="reset-button" onclick="resetItems()"type="submit" class="ms-3 btn btn-warning btn-lg mb-3 rounded-3 p-2 text-dark px-4">Reset Display</button>
+
+        </div>
+    </div>
+    <h3 class="bg-warning m-3 text-center p-4 rounded-3 text-dark">Enter Pokemon name or ID to display details!</h3>
+    <!-- Future idea: add toggle for search -->
+    <!-- <div id="search-toggle" class="text-center me-4">
+        <h3>Search by:</h3>
+        <div class="btn-group m-3" role="group" aria-label="Basic radio toggle button group">
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+            <label class="btn btn-outline-warning" for="btnradio1">Pokemon Name</label>
+          
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+            <label class="btn btn-outline-warning" onclick="toggleSearchID()" for="btnradio2">Pokemon ID</label>
+          </div>
+    </div> -->
+    
+    <div class="row">
+        <div class="col-md" id="search">
+            <form id="pokemon-search-form" class="m-2 pe-3">
+                <label for="pokemon-search" class="mt-2 mx-2 form-label">Pokemon name:</label>
+                <input type="text" class="mb-2 mx-2 form-control" id="pokemon-search" name="pokemon-search" placeholder="Pikachu" required>
+                <button id="pokemon-search-button"type="submit"class="btn btn-warning m-2 p-2 rounded-3 text-dark px-5">Display Details</button>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <form id="pokemon-searchID-form" class="m-2 pe-3">
+                <label for="pokemon-searchID" class="mt-2 mx-2 form-label">Pokemon ID:</label>
+                <input type="text" class="mb-2 mx-2 form-control" id="pokemon-searchID" name="pokemon-searchID" placeholder="1" required>
+                <button id="pokemon-searchID-button"type="submit"class="btn btn-warning m-2 p-2 rounded-3 text-dark px-5">Display Details</button>
+            </form>
+        </div> 
+    </div>   
+    <div class="row row-cols-1 row-cols-md-2 bg-light rounded-3">
+        <div class="col-md-6">
+            <div id="pokemon-search-return">
+                <br><br><br><br><br><p class="text-secondary">Search for a pokemon by name or ID...</p><br><br><br><br><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div id="pokemon-list">
+        
+            </div>
+        </div>
+    </div>
+
+
+    
+</body>
